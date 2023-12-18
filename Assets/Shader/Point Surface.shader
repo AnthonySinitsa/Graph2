@@ -9,7 +9,7 @@ Shader "Graph/Point Surface" {
       float3 worldPos;
     };
 
-    void ConfigureSurface (Input input, SurfaceOutputStandard surface) {}
+    void ConfigureSurface (Input input, inout SurfaceOutputStandard surface) {}
     ENDCG
   }
 
