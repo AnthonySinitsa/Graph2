@@ -12,4 +12,9 @@ public static class FunctionLibrary {
         y += 0.5f * Sin(2f * PI * (x + t));
         return y * (2f / 3f);
     }
+
+    public static float Ripple(float x, float t){
+        float d = Abs(x);
+        return d;
+    }
 }
