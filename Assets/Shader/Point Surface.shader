@@ -2,7 +2,7 @@ Shader "Graph/Point Surface" {
 
   SubShader {
     CGPROGRAM
-    #pragma surface CongureSurface Standard fullforwardshadows
+    #pragma surface ConfigureSurface Standard fullforwardshadows
     #pragma target 3.0
 
     struct Input {
