@@ -33,6 +33,7 @@ public class Graph : MonoBehaviour {
 		for (int i = 0; i < points.Length; i++) {
 			Transform point = points[i];
 			Vector3 position = point.localPosition;
+			position.y = f(position.x, time);
 			point.localPosition = position;
 		}
 	}
