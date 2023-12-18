@@ -5,9 +5,9 @@ public static class FunctionLibrary {
 
   public delegate float Function(float x, float y);
 
-  public enum FunctionName {Wave, MultiWave, Ripple}
+  public enum FunctionName { Wave, MultiWave, Ripple }
 
-  static Function[] functions = {Wave, MultiWave, Ripple};
+  static Function[] functions = { Wave, MultiWave, Ripple };
 
   public static Function GetFunction(FunctionName name){
     return functions[(int)name];
