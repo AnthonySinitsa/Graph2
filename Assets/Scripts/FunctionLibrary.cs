@@ -3,6 +3,19 @@ using static UnityEngine.Mathf;
 
 public static class FunctionLibrary {
 
+    public delegate float Function(float x, float y);
+    public static Function GetFunction(int index){
+        if (index == 0) {
+			return Wave;
+		}
+		else if (index == 1) {
+			return MultiWave;
+		}
+		else {
+			return Ripple;
+		}
+    }
+
     public static float Wave(float x, float t){
         return Sin(PI * (x + t));
     }
