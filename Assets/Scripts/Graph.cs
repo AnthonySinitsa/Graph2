@@ -40,8 +40,11 @@ public class Graph : MonoBehaviour {
 
 	void Update(){
 		duration += Time.deltaTime;
-		if(duration >= functionDuration){
+		if(transitioning){}
+		else if(duration >= functionDuration){
 			duration -= functionDuration;
+			transitioning = true;
+			transitionFunction = function;
 			PickNextFunction();
 		}
 		if(transitioning){
