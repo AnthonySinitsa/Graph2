@@ -33,6 +33,7 @@ public class Graph : MonoBehaviour {
 		duration += Time.deltaTime;
 		if(duration >= functionDuration){
 			duration -= functionDuration;
+			function = FunctionLibrary.GetNextFunctionName(function);
 		}
 		UpdateFunction();
 	}

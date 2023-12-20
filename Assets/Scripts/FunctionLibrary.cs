@@ -14,11 +14,7 @@ public static class FunctionLibrary{
     }
 
     public static FunctionName GetNextFunctionName(FunctionName name){
-        if(name < FunctionName.Torus){
-            return name + 1;
-        }else{
-            return FunctionName.Wave;
-        }
+        return (int)name < functions.Length - 1 ? name + 1 : 0;
     }
 
     public static Vector3 Wave(float u, float v, float t){
