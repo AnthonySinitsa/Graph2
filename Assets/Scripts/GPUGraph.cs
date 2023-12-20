@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Graph : MonoBehaviour {
+public class GPUGraph : MonoBehaviour {
 
 	[SerializeField, Range(10, 200)]
 	int resolution = 10;
