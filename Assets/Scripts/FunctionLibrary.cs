@@ -13,6 +13,14 @@ public static class FunctionLibrary{
         return functions[(int)name];
     }
 
+    public static FunctionName GetNextFunctionName(FunctionName name){
+        if(name < FunctionName.Torus){
+            return name + 1;
+        }else{
+            return FunctionName.Wave;
+        }
+    }
+
     public static Vector3 Wave(float u, float v, float t){
         Vector3 p;
         p.x = u;
