@@ -16,6 +16,8 @@ public class Graph : MonoBehaviour {
 
 	Transform[] points;
 
+	float duration;
+
 	void Awake () {
 		float step = 2f / resolution;
 		var scale = Vector3.one * step;
@@ -28,6 +30,10 @@ public class Graph : MonoBehaviour {
 	}
 
 	void Update(){
+		duration += Time.deltaTime;
+		if(duration >= functionDuration){
+			duration -= functionDuration;
+		}
 		UpdateFunction();
 	}
 
