@@ -40,7 +40,12 @@ public class Graph : MonoBehaviour {
 
 	void Update(){
 		duration += Time.deltaTime;
-		if(transitioning){}
+		if(transitioning){
+			if(duration >= transitionDuration){
+				duration -= transitionDuration;
+				transitioning = false;
+			}
+		}
 		else if(duration >= functionDuration){
 			duration -= functionDuration;
 			transitioning = true;
