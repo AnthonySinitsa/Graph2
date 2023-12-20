@@ -17,6 +17,11 @@ public static class FunctionLibrary{
         return (int)name < functions.Length - 1 ? name + 1 : 0;
     }
 
+    public static FunctionName GetRandomFunctionName(){
+        var choice = (FunctionName)GetRandomFunctionName.Range(0, functions.Length);
+        return choice;
+    }
+
     public static Vector3 Wave(float u, float v, float t){
         Vector3 p;
         p.x = u;
