@@ -11,6 +11,12 @@ public class GPUGraph : MonoBehaviour {
 	[SerializeField]
 	ComputeShader computeShader;
 
+	[SerializeField]
+	Material material;
+
+	[SerializeField]
+	Mesh mesh;
+
 	[SerializeField, Range(10, 200)]
 	int resolution = 10;
 
@@ -75,5 +81,10 @@ public class GPUGraph : MonoBehaviour {
 
     int groups = Mathf.CeilToInt(resolution / 8f);
     computeShader.Dispatch(0, groups, groups, 1);
+
+		var bounds = new Bounds(Vector3.zero, Vector3.one * (2f + 2f / resolution));
+		Graphics.DrawMeshInstancedProcedural(
+			mesh, 0, material, bounds, positionsBuffer.count
+		);
 	}
 }
