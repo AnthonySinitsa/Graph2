@@ -435,7 +435,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   computeShader: {fileID: 7200000, guid: 66553f04f6bc2764098ff1bf6e63fa34, type: 3}
-  material: {fileID: 2100000, guid: 1fa4ec893691a734194731a4aa27ce3d, type: 2}
+  material: {fileID: 2100000, guid: ba4fc796e85371f4483ecfd839871a12, type: 2}
   mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
   resolution: 1000
   function: 4
